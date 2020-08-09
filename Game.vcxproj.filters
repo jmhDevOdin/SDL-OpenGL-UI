@@ -88,6 +88,21 @@
     <ClCompile Include="TargetActor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h">
@@ -165,6 +180,11 @@
     <ClInclude Include="TargetActor.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="UIScreen.h" />
+    <ClInclude Include="PauseMenu.h" />
+    <ClInclude Include="DialogBox.h" />
+    <ClInclude Include="HUD.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Sprite.frag">

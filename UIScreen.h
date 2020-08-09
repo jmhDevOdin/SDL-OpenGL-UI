@@ -63,7 +63,7 @@ public:
 	// Set state to closing
 	void Close();
 	// Get state of UI srceen
-	UIState GetSTate() const { return mState; }
+	UIState GetState() const { return mState; }
 	// Change the title text
 	void SetTitle(const std::string& text,
 				  const Vector3& color = Color::White,
