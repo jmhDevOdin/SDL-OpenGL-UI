@@ -1,40 +1,25 @@
-﻿  Actor.cpp
-  AudioComponent.cpp
-  AudioSystem.cpp
-  BallActor.cpp
-  BallMove.cpp
-  BoxComponent.cpp
-  CameraComponent.cpp
-  Collision.cpp
-  Component.cpp
-  DialogBox.cpp
-  Font.cpp
-  FPSActor.cpp
-  FPSCamera.cpp
-  Game.cpp
-  HUD.cpp
-  Main.cpp
-  Math.cpp
-  Mesh.cpp
-E:\dev\GIT REPOS\SDL-OpenGL-UI\Mesh.cpp(117,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-E:\dev\GIT REPOS\SDL-OpenGL-UI\Mesh.cpp(117,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-E:\dev\GIT REPOS\SDL-OpenGL-UI\Mesh.cpp(117,32): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  MeshComponent.cpp
-  MoveComponent.cpp
-  Generating Code...
-  Compiling...
-  PauseMenu.cpp
-  PhysWorld.cpp
-  PlaneActor.cpp
-  Renderer.cpp
-  Shader.cpp
-  SoundEvent.cpp
-  SpriteComponent.cpp
-  TargetActor.cpp
-  Texture.cpp
-  UIScreen.cpp
-  VertexArray.cpp
-  Generating Code...
-Game.obj : error LNK2019: unresolved external symbol "public: __thiscall HUD::HUD(class Game *)" (??0HUD@@QAE@PAVGame@@@Z) referenced in function "private: void __thiscall Game::LoadData(void)" (?LoadData@Game@@AAEXXZ)
-Game.obj : error LNK2019: unresolved external symbol "public: __thiscall PauseMenu::PauseMenu(class Game *)" (??0PauseMenu@@QAE@PAVGame@@@Z) referenced in function "private: void __thiscall Game::HandleKeyPress(int)" (?HandleKeyPress@Game@@AAEXH@Z)
-E:\dev\GIT REPOS\SDL-OpenGL-UI\Debug\Game.exe : fatal error LNK1120: 2 unresolved externals
+﻿  Game.cpp
+  Game.vcxproj -> E:\dev\GIT REPOS\SDL-OpenGL-UI\Debug\Game.exe
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\libfreetype-6.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\libogg-0.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\libpng16-16.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\libvorbis-0.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\libvorbisfile-3.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\SDL2.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\SDL2_image.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\SDL2_mixer.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\SDL2_ttf.dll
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\SDL\lib\win\x86\zlib1.dll
+  10 File(s) copied
+  E:\dev\GIT REPOS\SDL-OpenGL-UI\\..\external\GLEW\lib\win\x86\glew32.dll
+  1 File(s) copied
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib\fmod.dll
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib\fmod64.dll
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib\fmodL.dll
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\lowlevel\lib\fmodL64.dll
+  4 File(s) copied
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\studio\lib\fmodstudio.dll
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\studio\lib\fmodstudio64.dll
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\studio\lib\fmodstudioL.dll
+  C:\Program Files (x86)\FMOD SoundSystem\FMOD Studio API Windows\api\studio\lib\fmodstudioL64.dll
+  4 File(s) copied

@@ -14,6 +14,8 @@
 #include "VertexArray.h"
 #include "SpriteComponent.h"
 #include "MeshComponent.h"
+#include "UIScreen.h"
+#include "Game.h"
 #include <GL/glew.h>
 
 Renderer::Renderer(Game* game)
@@ -49,7 +51,7 @@ bool Renderer::Initialize(float screenWidth, float screenHeight)
 	// Force OpenGL to use hardware acceleration
 	SDL_GL_SetAttribute(SDL_GL_ACCELERATED_VISUAL, 1);
 
-	mWindow = SDL_CreateWindow("Game Programming in C++ (Chapter 10)", 100, 100,
+	mWindow = SDL_CreateWindow("SDL/OpenGL 3.3: UI Test", 100, 100,
 		static_cast<int>(mScreenWidth), static_cast<int>(mScreenHeight), SDL_WINDOW_OPENGL);
 	if (!mWindow)
 	{
@@ -157,6 +159,12 @@ void Renderer::Draw()
 		{
 			sprite->Draw(mSpriteShader);
 		}
+	}
+
+	// Draw any UI screens
+	for (auto ui : mGame->GetUIStack())
+	{
+		ui->Draw(mSpriteShader);
 	}
 
 	// Swap the buffers

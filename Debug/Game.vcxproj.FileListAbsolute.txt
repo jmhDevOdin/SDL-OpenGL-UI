@@ -1,2 +1,4 @@
 E:\dev\Downloads\code\Chapter10\Debug\Game.exe
 E:\dev\Downloads\code\Chapter10\Debug\Game.pdb
+E:\dev\GIT REPOS\SDL-OpenGL-UI\Debug\Game.exe
+E:\dev\GIT REPOS\SDL-OpenGL-UI\Debug\Game.pdb

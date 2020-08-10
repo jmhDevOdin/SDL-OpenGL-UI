@@ -15,14 +15,13 @@
 #include "UIScreen.h"
 #include "HUD.h"
 #include "MeshComponent.h"
-#include "SpriteComponent.h"
 #include "FPSActor.h"
 #include "PlaneActor.h"
 #include "TargetActor.h"
 #include "BallActor.h"
 #include "PauseMenu.h"
-#include "SDL/SDL.h"
-#include "SDL/SDL_ttf.h"
+#include <SDL/SDL.h>
+#include <SDL/SDL_ttf.h>
 #include "Font.h"
 #include <fstream>
 #include <sstream>
@@ -66,6 +65,9 @@ bool Game::Initialize()
 		mAudioSystem = nullptr;
 		return false;
 	}
+	
+	// Create the physics world
+	mPhysWorld = new PhysWorld(this);
 
 	// Initialize SDL_ttf
 	if (TTF_Init() != 0)
@@ -73,8 +75,6 @@ bool Game::Initialize()
 		SDL_Log("Failed to initialize SDL_ttf");
 		return false;
 	}
-
-	mPhysWorld = new PhysWorld(this);
 
 	LoadData();
 
@@ -255,6 +255,7 @@ void Game::UpdateGame()
 			delete actor;
 		}
 	}
+
 	// Update audio system
 	mAudioSystem->Update(deltaTime);
 
@@ -266,14 +267,13 @@ void Game::UpdateGame()
 			ui->Update(deltaTime);
 		}
 	}
-
-	// Handle any UIScreens that are closed
+	// Delete any UIScreens that are closed
 	auto iter = mUIStack.begin();
 	while (iter != mUIStack.end())
 	{
 		if ((*iter)->GetState() == UIScreen::EClosing)
 		{
-			delete* iter;
+			delete *iter;
 			iter = mUIStack.erase(iter);
 		}
 		else
@@ -374,7 +374,6 @@ void Game::LoadData()
 	a->SetRotation(Quaternion(Vector3::UnitZ, -Math::PiOver2));
 }
 
-
 void Game::UnloadData()
 {
 	// Delete actors
@@ -400,6 +399,7 @@ void Game::UnloadData()
 void Game::Shutdown()
 {
 	UnloadData();
+	TTF_Quit();
 	delete mPhysWorld;
 	if (mRenderer)
 	{
@@ -477,9 +477,9 @@ Font* Game::GetFont(const std::string& fileName)
 
 void Game::LoadText(const std::string& fileName)
 {
-	// Clear existing map, if already loaded
+	// Clear the existing map, if already loaded
 	mText.clear();
-	// Try to open file
+	// Try to open the file
 	std::ifstream file(fileName);
 	if (!file.is_open())
 	{
@@ -513,7 +513,7 @@ void Game::LoadText(const std::string& fileName)
 const std::string& Game::GetText(const std::string& key)
 {
 	static std::string errorMsg("**KEY NOT FOUND**");
-	// Find this next in the map, if it exists
+	// Find this text in the map, if it exists
 	auto iter = mText.find(key);
 	if (iter != mText.end())
 	{

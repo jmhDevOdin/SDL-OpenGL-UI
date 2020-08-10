@@ -103,6 +103,9 @@
     <ClCompile Include="HUD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TargetComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h">
@@ -185,6 +188,7 @@
     <ClInclude Include="PauseMenu.h" />
     <ClInclude Include="DialogBox.h" />
     <ClInclude Include="HUD.h" />
+    <ClInclude Include="TargetComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Sprite.frag">

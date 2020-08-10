@@ -31,9 +31,9 @@ public:
 	bool GetHighlighted() const { return mHighlighted; }
 
 	// Returns true if the point is within the buttons bounds
-	bool ContainsPoint(const Vector2 pt) const;
+	bool ContainsPoint(const Vector2& pt) const;
 	// Called when button is clicked
-	void OnCLick();
+	void OnClick();
 private:
 	std::function<void()> mOnClick;
 	std::string mName;
@@ -77,7 +77,7 @@ protected:
 					 float scale = 1.0f);
 	// Sets the mouse mode to relative or not
 	void SetRelativeMoudeMode(bool relative);
-	class Game* game;
+	class Game* mGame;
 
 	class Font* mFont;
 	class Texture* mTitle;
